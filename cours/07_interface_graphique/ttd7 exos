@@ -1,0 +1,47 @@
+import tkinter as tk
+
+racine = tk.Tk() # Création de la fenêtre racine
+label1 = tk.Label(racine, text="12", font = ("helvetica", "26")) # création d'un widget
+label2 = tk.Label(racine, text="+", font = ("helvetica", "26")) # création d'un widget
+label3 = tk.Label(racine, text="25", font = ("helvetica", "26"))
+label4 = tk.Label(racine, text="=", font = ("helvetica", "26"))
+label5 = tk.Label(racine, text="37", font = ("helvetica", "26"))
+label6 = tk.Label(racine, text="choisir une valeur pour l'opérande gauche", font = ("helvetica", "26"))
+label7 = tk.Label(racine, text="calculer", font = ("helvetica", "26"))
+label8 = tk.Label(racine, text="choisir une valeur pour l'opérande droite", font = ("helvetica", "26"))
+label1.grid(column=1, row=0) # positionnement du premier widget
+label2.grid(row=0, column=2) # positionnement du premier widget
+label3.grid(row=0, column=2, columspan=2)
+label4.grid(row=0, column=4)
+label5.grid(row=0, column=5)
+label6.grid(row=1, column=0)
+label7.grid(row=1, column=2)
+label8.grid(row=2, column=0)
+racine.mainloop() # Lancement de la boucle principale
+bouton1 = tk.Button(racine, text="", command=lambda : affichage("ils sont fous ces romains"),
+font = ("helvetica", "30")
+
+
+
+
+
+
+import tkinter as tk
+
+def affichage(texte):
+    """ Modifie le texte d'un label. """
+    label.config(text=texte)
+
+racine = tk.Tk() # Création de la fenêtre racine
+label = tk.Label(racine, text="", padx=20, pady=20, font = ("helvetica", "30"))
+label.grid(row=0, column=0, columnspan=2)
+bouton1 = tk.Button(racine, text="affichage 1", command=lambda : affichage("ils sont fous ces romains"),
+                     font = ("helvetica", "30")
+                   ) 
+bouton1.grid(row=1, column=0) 
+bouton2 = tk.Button(racine, text="affichage 2", 
+                    command=lambda : affichage("quand lama faché, lui toujours faire ainsi"),
+                    font = ("helvetica", "30") 
+                   )
+bouton2.grid(row=1, column=1) 
+racine.mainloop() # Lancement de la boucle principale
